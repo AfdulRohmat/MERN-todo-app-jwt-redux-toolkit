@@ -1,10 +1,10 @@
 import React from "react";
-import Dashboard from "./components/Dashboard";
-import LoadingSpinner from "./components/LoadingSpinner";
-import Login from "./components/Login";
+import Dashboard from "./pages/Dashboard";
+import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
-import Register from "./components/Register";
+import Register from "./pages/Register";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -13,11 +13,13 @@ function App() {
         <Navbar />
         {/* <LoadingSpinner /> */}
         <Routes>
-          <Route exact path="/" element={<Dashboard />} />
+          <Route exact path="/" element={<Login />} />
           <Route exact path="/login" element={<Login />} />
+          <Route exact path="/dashboard" element={<Dashboard />} />
           <Route exact path="/register" element={<Register />} />
         </Routes>
       </Router>
+      <ToastContainer />
     </>
   );
 }

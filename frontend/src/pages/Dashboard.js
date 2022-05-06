@@ -1,11 +1,14 @@
 import React from "react";
-import GoalList from "./GoalList";
+import GoalList from "../components/GoalList";
+
+
 
 const Dashboard = () => {
+ 
   return (
     <>
       <div className="container">
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center pt-16">
           {/* WELCOME USER */}
           <h1 className="font-bold text-4xl text-slate-700 mt-12">
             Welcome Lorem
@@ -17,7 +20,7 @@ const Dashboard = () => {
           {/* INPUT GOAL */}
           <div className="w-5/6 mt-12">
             <label
-              for="name"
+              htmlFor="name"
               className="leading-7 text-xl text-slate-800 font-semibold"
             >
               Goal
